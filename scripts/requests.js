@@ -21,9 +21,3 @@ const getPuzzle = async (wordCount) => {
 	}
 	else { throw new Error('Unable to fetch puzzle') }
 }
-
-const getLocation = async () => {
-	const response = await fetch(`http://ipinfo.io/json?token=a0f9514728df02`)
-	if (response.status === 200) { return await response.json() }
-	else { throw new Error('Unable to get location') }
-}
